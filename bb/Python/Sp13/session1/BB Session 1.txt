@@ -1,0 +1,258 @@
+Last login: Thu May  2 02:09:54 on ttys001
+Mountain-Duo:~ Michael$ cd ~/Dropbox/CS10-Sp13/Beyond\ Blocks/Python/Sp13/
+Mountain-Duo:Sp13 Michael$ ls
+BB Session 1.key	bb_session1.py		fib.ypr
+__pycache__		fib.py
+Mountain-Duo:Sp13 Michael$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mountain-Duo:Sp13 Michael$ python3
+Python 3.3.1 (v3.3.1:d9893d13c628, Apr  6 2013, 11:07:11) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 1
+1
+>>> 1+1
+2
+>>> 5/2
+2.5
+>>> exit()
+Mountain-Duo:Sp13 Michael$ python3 bb_session1.py 
+Hello! Welcome to Beyond Blocks Session 1!
+
+Today, we're going to learn about Python!	Yay!
+
+
+Did you know that factorial(5) is 120?!
+Oh, by the way, my name is  Michael .
+
+Actually, my full name is  Michael Ball .
+
+Let's count down from 10!
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Wow!
+ Let's do it again!
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+But let's see it a 3rd way!
+2.5
+2
+1
+25
+4
+Whoa...wat
+None
+Let's learn powers of 2!
+1
+2
+4
+8
+And some more! How high can you go?
+1
+2
+4
+8
+16
+32
+64
+128
+256
+512
+1024
+2048
+4096
+8192
+16384
+32768
+65536
+131072
+262144
+524288
+1048576
+2097152
+4194304
+8388608
+Who likes pie? I can eat lots!
+3.141592653589793
+Mountain-Duo:Sp13 Michael$ python3
+Python 3.3.1 (v3.3.1:d9893d13c628, Apr  6 2013, 11:07:11) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 1
+1
+>>> "hello"
+'hello'
+>>> var=1
+>>> var = var + 1
+>>> var
+2
+>>> var += 1
+>>> var
+3
+>>> (True and False) or (True or False)
+True
+>>> (True)
+True
+>>> True and (False or True) or False
+True
+>>> if (1 > 2):
+...     print("True!")
+... else:
+...     print("Anything...")
+... 
+Anything...
+>>> var = 0
+>>> while (var < 5):
+...     print("var")
+...     var += 1
+... 
+var
+var
+var
+var
+var
+>>> for i in range(0, 10):
+...     print(i)
+... 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> for i in range(0, 10, 2):
+...     print(i)
+... 
+0
+2
+4
+6
+8
+>>> for i in range(10): #auto start from 0.
+...     print(i)
+... 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> def bad(x):
+... 
+  File "<stdin>", line 2
+    
+    ^
+IndentationError: expected an indented block
+>>> 97324507923640956203457623467095
+97324507923640956203457623467095
+>>> 1one= "Hi"
+  File "<stdin>", line 1
+    1one= "Hi"
+       ^
+SyntaxError: invalid syntax
+>>> one1 = "wat"
+>>> one1
+'wat'
+>>> one-two="does this work?"
+  File "<stdin>", line 1
+SyntaxError: can't assign to operator
+>>> one = 1
+>>> two = 2
+>>> one-two
+-1
+>>> def sub(a, b):
+...     return a - b
+... 
+>>> sub(1, 2)
+-1
+>>> hi="hi"
+>>> bye="bye")
+  File "<stdin>", line 1
+    bye="bye")
+             ^
+SyntaxError: invalid syntax
+>>> bye="bye"
+>>> sub(hi,bye)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in sub
+TypeError: unsupported operand type(s) for -: 'str' and 'str'
+>>> 1 + "hello"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+>>> '1' + 'hello'
+'1hello'
+>>> 3 * "hello"
+'hellohellohello'
+>>> print(50*"=")
+==================================================
+>>> print(500*"=")
+====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+>>> cos(56)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cos' is not defined
+>>> import math
+>>> math.cos(56)
+0.853220107722584
+>>> math.cos(π)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'π' is not defined
+>>> math.cos(math.pi)
+-1.0
+>>> from fib import fib
+>>> fib(10)
+55
+>>> fib(20)
+6765
+>>> help(math)
+
+>>> def f(a,b):
+...     print("Yes!")
+... 
+>>> f(1, 2)
+Yes!
+>>> ^D
+Mountain-Duo:Sp13 Michael$ 

@@ -1,0 +1,821 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+
+
+    <link rel="shortcut icon" href="http://bjc.berkeley.edu/bjcfav.png" type="image/png">
+    <link href="cs10style.css" title="CS10 Style" rel="stylesheet" type="text/css" />
+    <title>CS10 : BJC (The Beauty and Joy of Computing) | UC Berkeley EECS | Spring 2013</title>
+    <meta http-equiv="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)" />
+    <meta name="created" content="Wed, 12 May 2010 22:01:49 GMT" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <script type="text/javascript">
+
+function updateCalendar()
+        {
+		  	var today = new Date();
+	var tdate = today.getDate();
+	var tmonth = today.getMonth() + 1;
+	var tday = today.getDay();
+
+if (tmonth < 5 || tmonth == 5 && tdate < 8) {
+            var tableCellArr = new Array();
+            tableCellArr = document.getElementsByTagName("td");
+            for(var i=0; i < tableCellArr.length; i++)
+            {
+                //var tagName = document.getElementsByTagName( "*" ).item(i).nodeName;
+                var tagObj = document.getElementsByTagName("td").item(i);
+				var mo = tagObj.id;
+				var dy = tagObj.title;
+                //alert("TagName: " + tagName + "\n\ninnerText:\n" + tagObj.id);
+	if (mo < tmonth && tagObj.id > 0) { //past month
+            tagObj.style.backgroundColor="#BABABA";
+		} else if (mo == tmonth) {
+			if (dy < tdate && dy > 0) {
+            tagObj.style.backgroundColor="#BABABA";
+        } else if (dy == tdate) {
+			//golden rectangle for current date
+				tagObj.style.border="medium solid Gold";
+			}
+        }
+		} //closing for loop
+}
+		}
+
+function displaySpeech(img_name,img_src)
+{
+document[img_name].src = img_src;
+}
+</script></head>
+  <body onload="updateCalendar()">
+    <table>
+      <tbody>
+        <tr>
+          <td width="180">
+            <div style="position:absolute;top:40px;left:200px;z-index:40;"> <img
+                src="images/blank.gif" name="speech" /> </div>
+            <img width="192" border="0" align="bottom" height="217" src="images/new_navbar.gif"
+              class="navbar" alt="Your Navigation Bar didn't load." title="Click me to navigate."
+              usemap="#gobo" /> <map name="gobo">
+              <area shape="rect" coords="21,83,81,62" alt="Overview" href="#overview"
+                onmouseover="displaySpeech('speech', 'images/overview_jump.gif')"
+                onmouseout="displaySpeech('speech', 'images/blank.gif')" />
+              <area shape="rect" coords="22,106,58,85" alt="News" href="#news" onmouseover="displaySpeech('speech', 'images/news_jump.gif')"
+                onmouseout="displaySpeech('speech', 'images/blank.jpg')" />
+              <area shape="rect" coords="22,126,79,108" alt="Calendar" href="#calendar"
+                onmouseover="displaySpeech('speech', 'images/calendar_jump.gif')"
+                onmouseout="displaySpeech('speech', 'images/blank.gif')" />
+              <area shape="rect" coords="22,150,58,128" alt="Staff" href="#staff"
+                onmouseover="displaySpeech('speech', 'images/staff_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')" />
+              <area shape="rect" coords="22,173,72,150" alt="Grades" href="#grades"
+                onmouseover="displaySpeech('speech', 'images/grading_jump.gif')"
+                onmouseout="displaySpeech('speech', 'images/blank.gif')" />
+              <area shape="rect" coords="22,193,90,172" alt="Resources" href="#resources"
+                onmouseover="displaySpeech('speech', 'images/resources_jump.gif')"
+                onmouseout="displaySpeech('speech', 'images/blank.gif')" />
+            </map>
+          </td>
+          <td>
+            <p class="logo"> <b> 
+		CS10 : BJC (The Beauty and Joy of Computing)<br />
+		UC Berkeley EECS <br />
+                Spring 2013 </b> </p>
+            <br />
+          </td>
+          <td width="160"> <a href="http://www.berkeley.edu/"> <img border="0"
+                src="images/bjc186.png" alt="BJC" /> </a></td>
+        </tr>
+      </tbody>
+    </table>
+    <a name="overview">
+      <p class="heading">  Overview </p>
+    </a>
+    <div class="wp-caption alignright" style="width:360px;align:right;float:right;margin:0px 0px 5px 5px">
+      <img width="350" align="middle" height="251" src="//innovations.coe.berkeley.edu/vol3-issue10-dec09/computing1.jpg/image"
+        alt="Fall 2009 students work together using pair programming" />
+      <p class="wp-caption-text"> Fall 2009 students <a href="http://en.wikipedia.org/wiki/Pair_programming">
+          pair programming </a> in Scratch. </p>
+    </div>
+    <div class="wp-caption alignright" style="width:334px;float:left;margin:0px 5px 0px 0px">
+      <img width="324" align="middle" height="216" src="images/AppleOrchardLab.jpg"
+        alt="Our new Mac lab" />
+      <p class="wp-caption-text"> Our labs are held in the Apple Orchard, which
+        is not only the newest lab on campus with the fastest machines, but also
+        has the most natural light! </p>
+    </div>
+    <p style="text-align:justify;">     <b>CS10</b>, <i>The Beauty and Joy of
+        Computing</i>, is an exciting new course offered by the <a href="http://www.eecs.berkeley.edu/">
+        UC Berkeley EECS Dept</a>. Computing has changed the world in profound
+      ways. It has opened up wonderful new ways for people to connect, design,
+      research, play, create, and express themselves. However, just using a
+      computer is only a small part of the picture. The real transformative and
+      empowering experience comes when one learns how to program the computer,
+      to translate ideas into code. This course will teach students how to do
+      exactly that, using <a href="http://byob.berkeley.edu/">BYOB</a> and <a
+        href="http://snap.berkeley.edu/run/"> Snap!</a> (based on <a href="http://www.scratch.mit.edu">
+        Scratch</a>), one of the friendliest programming languages ever
+      invented. It's purely graphical, which means programming involves simply
+      dragging blocks around, and building bigger blocks out of smaller blocks.
+    </p>
+    <p style="text-align:justify;">    But this course is far more than just
+      learning to program. We'll focus on some of the "Big Ideas" of computing,
+      such as abstraction, design, recursion, concurrency, simulations, and the
+      limits of computation. We'll show some beautiful applications of computing
+      that have changed the world, talk about the history of computing, and
+      where it will go in the future. Throughout the course, relevance will be
+      emphasized: relevance to the student and to society. As an example, the
+      final project will be completely of the students' choosing, on a topic
+      most interesting to them. The overarching theme is to expose students to
+      the beauty and joy of computing. This course is designed for computing
+      non-majors, although interested majors are certainly welcome to take the
+      class as well! We are especially excited about bringing computing (through
+      this course) to traditionally under-represented groups in computing, i.e.,
+      women and ethnic minorities. </p>
+    <p style="text-align:justify">    Some context: in the Fall of 2009, we
+      piloted a 2-unit version of this course as the freshman/sophomore seminar
+      <a href="http://inst.eecs.berkeley.edu/%7Ecs10/fa09/">CS39N: The Beauty
+        and Joy of Computing</a> to 20 students. <a href="http://innovations.coe.berkeley.edu/vol3-issue10-dec09/beauty-and-joy-of-computing">It
+        was such a success</a> that we decided to move ahead to make this course
+      our new computing course for non-majors, replacing the venerable <a href="http://inst.eecs.berkeley.edu/%7Ecs3l/">
+        CS3L</a> and <a href="http://inst.eecs.berkeley.edu/%7Eselfpace/class/cs3s">
+        CS3S</a> . Since then, this has been one of the most popular courses in
+      EECS. Don't believe us? <a href="https://hkn.eecs.berkeley.edu/coursesurveys/course/CS/10">See
+        for yourself!</a> We're continuing to grow the course as word spreads to
+      more students. We're continually replacing the weakest parts of the
+      curriculum and hope you'll enjoy! </p>
+    <p style="text-align:justify">    We will be using Pair Programming,
+      described best by Laurie Williams, a computer science professor at North
+      Carolina State University: "Two programmers working side-by-side,
+      collaborating on the same design, algorithm, code or test. One programmer,
+      the driver, has control of the keyboard/mouse and actively implements the
+      program. The other programmer, the observer, continuously observes the
+      work of the driver to identify tactical (syntactic, spelling, etc.)
+      defects and also thinks strategically about the direction of the work. On
+      demand, the two programmers can brainstorm any challenging problem.
+      Because the two programmers periodically switch roles, they work together
+      as equals to develop software." </p>
+    <center>
+      <div class="wp-caption center" style="width:863px;align:center;float:center;margin:0px 5px 0px 0px">
+        <iframe width="853" height="480" frameborder="0" src="//www.youtube.com/embed/videoseries?list=PL48C2AF5762B2D32D&amp;hl=en_US&amp;hd=1"
+          allowfullscreen=""></iframe>
+        <p class="wp-caption-text"> 18 student testimonials about CS10! </p>
+      </div>
+    </center>
+    <div style="clear: both;">   </div>
+    <a name="news">
+      <p class="heading"> News </p>
+    </a>
+    <table border="1">
+      <tbody>
+        <tr class="heading">
+        </tr>
+        <!--
+<p style="text-align:justify">&nbsp;&nbsp;&nbsp;We are delighted to announce that this course was recently chosen as one of the<a href="http://csprinciples.org/pilots.php">	5 National pilots</a>by the<a href="http://www.collegeboard.com/">	CollegeBoard</a>(the folks that offer Advanced Placement exams) as a model for an exciting new<a href="http://csprinciples.org/">	First Course in Computing:	<b>		Computer Science : Principles	</b></a>. Our intent is to provide this entire course, through<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">	Creative Commons</a>, to the global community. As an example, all of<a href="http://webcast.berkeley.edu/course_details_new.php?seriesid=2011-B-26230&amp;semesterid=2011-B">	our lecture webcasts are available</a>, our readings are all free (linked from our calendar), and our labs and homework are publicly available via<a href="http://sage.cs.berkeley.edu/">	our Moodle server</a>(also linked from our calendar). We'll package the whole thing into a single zip file at the end of the Fall 2010 semester. We'll even provide High Definition lecture videos with extra cool content! As well, we've been working closely with three local high school computer science teachers to develop this course, and they may run variants of this course at their school in the near future:<p>&nbsp;&nbsp;&nbsp;<b>	&#955;</b>&nbsp;<b>	Josh Paley</b>of<i>	Gunn High School</i>in Palo Alto, CA<br />&nbsp;&nbsp;&nbsp;<b>	&#955;</b>&nbsp;<b>	Eugene Lemon</b>of<i>	Ralph Bunche High School</i>in Oakland, CA<br />&nbsp;&nbsp;&nbsp;<b>	&#955;</b>&nbsp;<b>	Ray Pedersen</b>of<i>	Albany High School</i>in Albany, CA</p>-->
+        <tr>
+          <td width="100" valign="top" style="text-align:top;"> <strong>
+              2012-08-23 </strong> </td>
+          <td style="text-align:left;"> <strong> CS10 makes The Daily Cal,
+              again! </strong> <br />
+            Check out CS10 <a href="http://www.dailycal.org/2012/08/15/lecture-lust-famous-courses-at-cal/">featured
+              in the Daily Cal.</a></td>
+        </tr>
+        <tr>
+          <td width="100" valign="top" style="text-align:top;"> <strong>
+              2012-08-23 </strong> </td>
+          <td style="text-align:left;"> <strong> Welcome to CS10, everyone! </strong>
+            <br />
+            We'll be using <a href="https://piazza.com/berkeley/fall2012/cs10/home">Piazza</a>
+            for all staff-student communication from now on. </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="heading">  Webcasts </p>
+    <p style="padding-left: 4px;"> Webcasts of our lectures are freely available
+      online! </p>
+    <ul>
+      <li> Check out the <a href="http://webcast.berkeley.edu/playlist#c,s,Spring_2011,A048EC6D65F1CB15">
+          Spring 2011 </a> archive. </li>
+      <li> The <a href="http://webcast.berkeley.edu/playlist#c,s,Fall_2010,5E701E6C652B77D3">
+          Fall 2010 </a> archive is also available. </li>
+    </ul>
+    <a name="calendar">
+      <p class="heading">  Calendar </p>
+    </a>
+
+<!--#include file="calendar.html"-->
+
+    <h1> Weekly Schedule </h1>
+    <table>
+      <tbody>
+        <tr class="weekCalendarRow">
+          <th height="37"> Hour </th>
+          <th colspan="2"> Monday </th>
+          <th colspan="2"> Tuesday </th>
+          <th> Wednesday </th>
+          <th rowspan="1" colspan="2"> Thursday </th>
+          <th colspan="2"> Friday </th>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 8:00am </td>
+          <td class="calendar" colspan="2">   </td>
+          <td class="calendar" colspan="2">   </td>
+          <td class="calendar">   </td>
+          <td class="calendar" rowspan="1" colspan="2">   </td>
+          <td colspan="2" class="disc">Discussion Section 3 <br />
+            (Aijia) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 320 Soda Hall
+            </a></td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 9:00am </td>
+          <td class="calendar" colspan="2">   </td>
+          <td rowspan="2" class="lab" colspan="2"> Lab Section 5 <br />
+            (Michael) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a>  <br />
+          </td>
+          <td rowspan="2" class="lab"> Lab Section 2 <br />
+            (Pierce) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a> </td>
+          <td rowspan="2" class="lab" colspan="2"> Lab Section 5 <br />
+            (Michael) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a>    </td>
+          <td rowspan="2" colspan="1" class="lab"> Lab Section 2 <br />
+            (Pierce) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai</a> </td>
+          <td class="disc"> Discussion Section 1 <br />
+            (Dan) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 320 Soda Hall
+            </a></td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 10:00am </td>
+          <td class="calendar" colspan="2">   </td>
+          <td class="oh"> OH (Dan Arm)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">411 Soda </a></td>
+          </td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 11:00am </td>
+          <td class="lecture" colspan="2"> Lecture <br />
+            <a href="http://www.berkeley.edu/map/maps/BC45.html">2050 VLSB</a> 
+          </td>
+          <td rowspan="2" colspan="2" class="lab"> Lab Section 6 <br />
+            (Max) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a> </td>
+          <td rowspan="1" class="lecture"> Lecture <br />
+            <a href="http://www.berkeley.edu/map/maps/BC45.html">2050 VLSB</a></td>
+          <td rowspan="2" class="lab" colspan="2"> Lab Section 6 <br />
+            (Max) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a>
+          </td>
+          <td style="width: 180px;" class="disc" colspan="1"> Discussion Section
+            2 <br />
+            (Pierce) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 320 Soda Hall
+            </a> </td>
+          <td class="oh"> OH (Dan Garcia)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">777 Soda </a></td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 12:00pm </td>
+          <td colspan="1" rowspan="2" class="lab">Lab Section 1 <br />
+            (Aijia)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a><br />
+            <br />
+             </td>
+          <td class="calendar" colspan="1">   </td>
+          <td colspan="1" rowspan="2" class="lab">Lab Section 1 <br />
+            (Aijia)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a><br />
+            <br /> </td>
+          <td class="disc" colspan="1"> Discussion Section 4 <br />
+            (Michael) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 320 Soda Hall
+            </a> </td>
+          <td class="oh"> OH (Pierce Vollucci)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">651 Soda </a></td>
+
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 1:00pm </td>
+          <td class="oh"> OH (Max Dougherty)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">611 Soda </a></td>
+          <td rowspan="2" class="lab" colspan="2"> Lab Section 7 <br />
+            (Max) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a> <br />
+          </td>
+          <td rowspan="2" class="lab" colspan="2"> Lab Section 7 <br />
+            (Max) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a>
+          </td>
+          <td colspan="1" class="disc"> Discussion Section 5 <br />
+            (Michael) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 320 Soda Hall
+            </a> </td>
+          <td class="oh"> OH (Max Dougherty)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">411 Soda </a></td>
+
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 2:00pm </td>
+          <td class="calendar" colspan="2">   </td>
+          <td class="oh"> OH (Michael Ball)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">411 Soda </a></td>
+          <td colspan="1" class="disc"> Discussion Section 6<br />
+            (Max) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 320 Soda Hall
+            </a> </td>
+          <td class="oh"> OH (Michael Ball)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">411 Soda </a></td>
+
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 3:00pm </td>
+          <td class="calendar" colspan="2">   </td>
+          <td rowspan="2" class="lab" colspan="1"> Lab Section 8 <br />
+            (Dan) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai</a> <br /> </td>
+          <td class="calendar">   </td>
+          <td class="calendar">   </td>
+          <td colspan="1" rowspan="2" class="lab"> Lab Section 8 <br />
+            (Dan) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai</a>
+          </td>
+          <td class="calendar">   </td>
+          <td colspan="2" class="disc"> Discussion Section 7 <br />
+            (Max) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 320 Soda Hall
+            </a> </td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 4:00pm </td>
+          <td class="calendar" colspan="2">   </td>
+          <td class="oh"> OH (Aijia)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">751 Soda </a></td>
+          <td class="calendar">   </td>
+          <td class="oh"> OH (Aijia)<br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html">411 Soda </a></td>
+          <td colspan="2" class="disc"> Discussion Section 8 <br />
+            (Aijia) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 320 Soda Hall
+            </a> </td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 5:00pm </td>
+          <td colspan="2" rowspan="2" class="lab"><a href="http://www.berkeley.edu/map/maps/AB45.html">
+            </a>Lab Section 3 <br />
+            (Aijia) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a><br />
+              </td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+          <td colspan="1" rowspan="2" class="lab">Lab Section 3 <br />
+            (Aijia) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a></td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 6:00pm </td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 7:00pm </td>
+          <td colspan="2" rowspan="2" class="lab">Lab Section 4 <br />
+            (Michael) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a></td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+          <td colspan="1" rowspan="2" class="lab">Lab Section 4 <br />
+            (Michael) <br />
+            <a href="http://www.berkeley.edu/map/maps/AB45.html"> 200 Sutardja
+              Dai </a></td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+          <td colspan="2" rowspan="1" class="calendar">   </td>
+        </tr>
+        <tr class="weekCalendarRow">
+          <td class="calendar"> 8:00pm </td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+          <td colspan="2" rowspan="1" class="calendar"> <br />
+          </td>
+          <td colspan="2" rowspan="1" class="calendar">   </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!--end of calendar code--> 
+<a name="staff">
+      <p class="heading">  Staff </p>
+    </a>
+    <div style="clear: both;">   </div>
+    <h1> Instructor and Teaching Assistants (Office Hours on <i>Weekly Schedule</i> above)</h1>
+    <!-- Dan G -->
+    <div style="width: 33%; float: left; text-align: center;"> <a href="http://www.cs.berkeley.edu/%7Eddgarcia/gifs/DanGarciaUCBFaculty2004.jpg"><img
+          width="200" align="middle" height="300" src="images/Fa12/t/DanGarcia.jpg"
+          alt="" title="" class="staff" /></a> <br />
+      <a href="http://www.cs.berkeley.edu/%7Eddgarcia/"> <b> Sr. Lecturer SOE
+          Dan Garcia </b> </a> (<a href="bios/DanBio.txt">bio</a>) <br />
+      <a href="mailto:ddgarcia@cs.berkeley.edu"> <tt> ddgarcia@cs.berkeley.edu
+        </tt> </a> <br />
+      777 Soda, (510) 517-4041 <br />
+    </div>
+    <!-- Pierce -->
+    <div style="width: 33%; float: left; text-align: center;"> <a href="images/Fa12/PierceVollucci.jpg"><img
+          width="200" align="middle" height="300" src="images/Fa12/t/PierceVollucci.jpg"
+          alt="" title="" class="staff" /></a> <br />
+      <a href="http://www.linkedin.com/pub/pierce-vollucci/25/727/64"> <b>Head
+          TA Pierce Vollucci </b></a>(<a href="bios/PierceBio.txt">bio</a>) <br />
+      <a href="mailto:cs10-ta@inst.eecs.berkeley.edu"> <tt>
+          cs10-ta@inst.eecs.berkeley.edu </tt> </a> <br />
+    </div>
+    <!-- Aatash 
+    <div style="width: 33%; float: left; text-align: center;">      <a href="images/Fa12/AatashParikh.jpg"><img width="200" align="middle" height="300" src="images/Fa12/t/AatashParikh.jpg" alt="" title="" class="staff" /></a> <br />      <a href="#"> <b>TA Aatash Parikh</b></a> (<a href="bios/AatashBio.txt">bio</a>) <br />      <a href="mailto:aatash@berkeley.edu"> <tt> aatash@berkeley.edu </tt> </a> <br />      </div> -->
+    <!-- Aijia -->
+    <div style="width: 33%; float: left; text-align: center;"> <a href="images/Fa12/t/AijiaYan.jpg"><img
+          width="200" align="middle" height="300" src="images/Fa12/t/AijiaYan.jpg"
+          alt="" title="" class="staff" /></a><br />
+      <a href="#"> <b>TA Aijia Yan</b></a> (<a href="bios/AijiaBio.html">bio</a>)
+      <br />
+      <a href="mailto:aijiay@berkeley.edu"> <tt> aijiay@berkeley.edu </tt> </a>
+      <br />
+    </div>
+    <div style="clear: both;">   </div>
+    <!-- Dan A -->
+    <div style="width: 33%; float: left; text-align: center;"> <a href="images/Fa12/DanArmendariz.jpg"><img
+          width="200" align="middle" height="300" src="images/Fa12/t/DanArmendariz.jpg"
+          alt="images/Fa12/DanArmendariz.jpg" title="" class="staff" /></a> <br />
+      <a href="http://danallan.net/about.php"> <b>TA Dan Armendariz</b></a> (<a
+        href="bios/ArmBio.txt">bio</a>) <br />
+      <a href="mailto:danallan@eecs.berkeley.edu"> <tt>
+          danallan@eecs.berkeley.edu </tt> </a> <br />
+    </div>
+    <!-- Max -->
+    <div style="width: 33%; float: left; text-align: center;"> <a href="images/Fa12/MaxDougherty.jpg"><img
+          width="200" align="middle" height="300" src="images/Fa12/t/MaxDougherty.jpg"
+          alt="" title="" class="staff" /></a> <br />
+      <a href="#"> <b>TA Max Dougherty </b></a>(<a href="bios/MaxBio.txt">bio</a>)
+      <br />
+      <a href="mailto:mdougherty@berkeley.edu"> <tt> mdougherty@berkeley.edu </tt>
+      </a> <br />
+    </div>
+    <!--Michael-->
+    <div style="width: 33%; float: left; text-align: center;">       <a href="images/Fa12/MichaelBall.jpg"><img width="200" align="middle" height="300" src="images/Fa12/t/MichaelBall.jpg" alt="" title="" class="staff" /></a> <br />      <a href="http://michaelballphoto.com"> <b>TA Michael Ball</b></a><b> </b>(<a href="bios/MichaelBio.txt">bio</a>) <br />      <a href="mailto:cs10-tb@inst.eecs.berkeley.edu"> <tt> cs10-th@inst.eecs.berkeley.edu </tt> </a> <br />      </div>
+    <!-- Samir
+    <div style="width: 33%; float: left; text-align: center;"> <a href="images/Fa12/SamirMakhani.jpg"><img
+          width="200" align="middle" height="300" src="images/Fa12/t/SamirMakhani.jpg"
+          alt="" title="" class="staff" /></a> <br />
+      <a href="#"> <b>TA Samir Makhani</b></a> (<a href="bios/SamirBio.txt">bio</a>)
+      <br />
+      <a href="mailto:makhani@berkeley.edu"> <tt> makhani@berkeley.edu </tt> </a>
+      <br />
+    </div>
+    -->
+    <div style="clear: both;">   </div>
+    <h1> Readers </h1>
+    <!--
+    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/MarkMiyashita.jpg"><img width="200" height="300" src="images/Fa12/t/MarkMiyashita.jpg" alt="" title="" class="staff" /></a> <br />      <b> Head Reader Mark Miyashita </b> ( <a href="bios/MarkBio.txt">bio</a> ) <br />      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt> cs10-rc@inst.eecs.berkeley.edu </tt> </a>     </div>    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/AlyshaJivani.jpg"><img width="200" height="300" src="images/Fa12/t/AlyshaJivani.jpg" alt="" h="" title="" class="staff" /></a> <br />      <b> Alysha Jivani </b> ( <a href="bios/AlyshaBio.txt">bio</a> ) <br />      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt> cs10-rc@inst.eecs.berkeley.edu </tt> </a>     </div>    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/AnjuThomas.jpg"><img width="200" height="300" src="images/Fa12/t/AnjuThomas.jpg" alt="" h="" title="" class="staff" /></a> <br />      <b> Anju Thomas </b> ( <a href="bios/AnjuBio.txt">bio</a> ) <br />      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt> cs10-rc@inst.eecs.berkeley.edu </tt> </a>    </div>    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/ChristianPedersen.jpg"><img width="200" height="300" src="images/Fa12/t/ChristianPedersen.jpg" alt="" h="" title="" class="staff" /></a> <br />      <b> Christian Pedersen </b> ( <a href="bios/ChristianBio.txt">bio</a> ) <br />      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt> cs10-rc@inst.eecs.berkeley.edu </tt> </a>     </div>    <div style="clear: both;">   </div>    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/KelseyTheriault.jpg"><img width="200" height="300" src="images/Fa12/t/KelseyTheriault.jpg" alt="" title="" class="staff" /></a><br />      <b> Kelsey Theriault </b> ( <a href="bios/KelseyBio.txt">bio</a> ) <br />      <a href="mailto:cs10-ra@inst.eecs.berkeley.edu"> <tt> cs10-ra@inst.eecs.berkeley.edu </tt> </a>    </div>    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/MadeehaGhori.jpg"><img width="200" src="images/Fa12/t/MadeehaGhori.jpg" alt="" title="" class="staff" height="300" /></a> <br />      <b> Madeeha Ghori </b> ( <a href="bios/MadeehaBio.txt">bio</a> ) <br />      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt> cs10-rd@inst.eecs.berkeley.edu </tt> </a>    </div>    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/VivianLo.jpg"><img width="200" height="300" src="images/Fa12/t/VivianLo.jpg" alt="" h="" title="" class="staff" /></a> <br />      <b> Vivian Lo </b> ( <a href="bios/VivianBio.txt">bio</a> ) <br />      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt> cs10-rc@inst.eecs.berkeley.edu </tt> </a>     </div>-->
+    <div style="width: 25%; float: left; text-align: center;"> <a href="images/Fa12/IanBirnam.jpg"><img
+          width="200" height="300" src="images/Fa12/t/IanBirnam.jpg" alt="" title=""
+          class="staff" /></a><br />
+      <b> Head Reader (TAiT) Ian Birnam </b> ( <a href="bios/IanBio.txt">bio</a>
+      ) <br />
+      <a href="mailto:ibirnam@berkeley.edu"> <tt> ibirnam@berkeley.edu </tt> </a>
+    </div>
+    <div style="width: 25%; float: left; text-align: center;"> <a href="images/Fa12/JessicaHudiono.jpg"><img
+          width="200" height="300" src="images/Fa12/t/JessicaHudiono.jpg" alt=""
+          h="" title="" class="staff" /></a> <br />
+      <b> Jessica Hudiono </b> ( <a href="bios/JessicaBio.txt">bio</a> ) <br />
+      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt>
+          cs10-rc@inst.eecs.berkeley.edu </tt> </a> </div>
+    <div style="width: 25%; float: left; text-align: center;"> <a href="images/Fa12/LaurenMock.jpg"><img
+          width="200" height="300" src="images/Fa12/t/LaurenMock.jpg" alt="" h=""
+          title="" class="staff" /></a> <br />
+      <b> (TAiT) Lauren Mock </b> ( <a href="bios/LaurenBio.txt">bio</a> )
+      <br />
+      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt>
+          cs10-rc@inst.eecs.berkeley.edu </tt> </a> </div>
+    <div style="width: 25%; float: left; text-align: center;"> <a href="images/Fa12/PeterSujan.jpg"><img
+          width="200" height="300" src="images/Fa12/t/PeterSujan.jpg" alt="" h=""
+          title="" class="staff" /></a> <br />
+      <b> Peter Sujan </b> ( <a href="bios/PeterBio.txt">bio</a> ) <br />
+      <a href="mailto:cs10-rc@inst.eecs.berkeley.edu"> <tt>
+          cs10-rc@inst.eecs.berkeley.edu </tt> </a> </div>
+    <div style="clear: both;">   </div>
+    <div style="clear: both;">   </div>
+    <h1> Lab Assistants </h1>
+
+    <!--
+    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/AndyCheng.jpg"><img width="200" height="300" src="images/Fa12/t/AndyCheng.jpg" alt="" h="" title="" class="staff" /></a> <br />      <b> Andy Cheng </b> ( <a href="bios/AndyChengBio.txt">bio</a> ) <br />    </div>    </div>    <div style="width: 25%; float: left; text-align: center;">      <a href="images/Fa12/BernalJimenez.jpg"><img width="200" height="300" src="images/Fa12/t/BernalJimenez.jpg" alt="" h="" title="" class="staff" /></a> <br />      <b> Bernal Jimenez </b> ( <a href="bios/BernalJimenezBio.txt">bio</a> ) <br />    </div>-->
+
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/AleksKamko.jpg"><img width="200" height="300" src="images/Sp13/t/AleksKamko.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Aleks Kamko </b> ( <a href="bios/AleksKamkoBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/AndrewSchmitt.jpg"><img width="200" height="300" src="images/Sp13/t/AndrewSchmitt.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Andrew Schmitt </b> ( <a href="bios/AndrewSchmittBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/AudreyChou.jpg"><img width="200" height="300" src="images/Sp13/t/AudreyChou.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Audrey Chou </b> ( <a href="bios/AudreyChouBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/BrianTerry.jpg"><img width="200" height="300" src="images/Fa12/t/BrianTerry.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Brian Terry </b> ( <a href="bios/BrianTerryBio.txt">bio</a> ) <br />
+    </div>
+
+    <div style="clear: both;">   </div>
+
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/DavidMai.jpg"><img width="200" height="300" src="images/Fa12/t/DavidMai.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> David Mai </b> ( <a href="bios/DavidMaiBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/ElizabethPrader.jpg"><img width="200" height="300" src="images/Fa12/t/ElizabethPrader.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Elizabeth Prader </b> ( <a href="bios/LizBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/FeliciaLee.jpg"><img width="200" height="300" src="images/Fa12/t/FeliciaLee.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Felicia Lee </b> ( <a href="bios/FeliciaLeeBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/FrankLu.jpg"><img width="200" height="300" src="images/Sp13/t/FrankLu.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Frank Lu </b> ( <a href="bios/FrankLuBio.txt">bio</a> ) <br />
+    </div>
+
+    <div style="clear: both;">   </div>
+
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/JaclynBurge.jpg"><img width="200" height="300" src="images/Sp13/t/JaclynBurge.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Jaclyn Burge </b> ( <a href="bios/JaclynBurgeBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/JeffreySnowiss.jpg"><img width="200" height="300" src="images/Sp13/t/JeffreySnowiss.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Jeffrey Snowiss </b> ( <a href="bios/JeffreySnowissBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/JesseHalim.jpg"><img width="200" height="300" src="images/Fa12/t/JesseHalim.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Jesse Halim </b> ( <a href="bios/JesseHalimBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/JessicaKo.jpg"><img width="200" height="300" src="images/Sp13/t/JessicaKo.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Jessica Ko </b> ( <a href="bios/JessicaKoBio.txt">bio</a> ) <br />
+    </div>
+
+    <div style="clear: both;">   </div>
+
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/JihuiJin.jpg"><img width="200" height="300" src="images/Fa12/t/JihuiJin.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Jihui Jin </b> ( <a href="bios/JihuiJinBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/JimmyLee.jpg"><img width="200" height="300" src="images/Sp13/t/JimmyLee.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Jimmy Lee </b> ( <a href="bios/JimmyLeeBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/JoannaAbot.jpg"><img width="200" height="300" src="images/Sp13/t/JoannaAbot.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> (TAiT) Joanna Abot </b> ( <a href="bios/JoannaAbotBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/JocelynTakahashi.jpg"><img width="200" height="300" src="images/Sp13/t/JocelynTakahashi.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Jocelyn Takahashi </b> ( <a href="bios/JocelynTakahashiBio.txt">bio</a> ) <br />
+    </div>
+
+    <div style="clear: both;">   </div>
+
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/JoshPerline.jpg"><img width="200" height="300" src="images/Sp13/t/JoshPerline.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> (TAiT) Josh Perline </b> ( <a href="bios/JoshPerlineBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/KatieCheu.jpg"><img width="200" height="300" src="images/Sp13/t/KatieCheu.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Katie Cheu </b> ( <a href="bios/KatieCheuBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/KelvinMak.jpg"><img width="200" height="300" src="images/Sp13/t/KelvinMak.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> (TAiT) Kelvin Mak </b> ( <a href="bios/KelvinMakBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/KouTakahama.jpg"><img width="200" height="300" src="images/Sp13/t/KouTakahama.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> (TAiT) Kou Takahama </b> ( <a href="bios/KouBio.txt">bio</a> ) <br />
+    </div>
+
+    <div style="clear: both;">   </div>
+
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/MichaelRoss.jpg"><img width="200" height="300" src="images/Sp13/t/MichaelRoss.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> (TAiT) Michael Ross </b> ( <a href="bios/MichaelRossBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/MichelleUng.jpg"><img width="200" height="300" src="images/Sp13/t/MichelleUng.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Michelle Ung </b> ( <a href="bios/MichelleUngBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/NabeelSaleem.jpg"><img width="200" height="300" src="images/Sp13/t/NabeelSaleem.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Nabeel Saleem </b> ( <a href="bios/NabeelSaleemBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/NickWissman.jpg"><img width="200" height="300" src="images/Sp13/t/NickWissman.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> (TAiT) Nick Wissman </b> ( <a href="bios/NickWissman.txt">bio</a> ) <br />
+    </div>
+
+    <div style="clear: both;">   </div>
+
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/PatrickWu.jpg"><img width="200" height="300" src="images/Fa12/t/PatrickWu.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Patrick Wu </b> ( <a href="bios/PatrickWuBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Sp13/RyanLim.jpg"><img width="200" height="300" src="images/Sp13/t/RyanLim.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Ryan Lim </b> ( <a href="bios/RyanLimBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/SumerMohammed.jpg"><img width="200" height="300" src="images/Fa12/t/SumerMohammed.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Sumer Mohammed </b> ( <a href="bios/SumerMohammedBio.txt">bio</a> ) <br />
+    </div>
+    <div style="width: 25%; float: left; text-align: center;">
+      <a href="images/Fa12/YvonneHo.jpg"><img width="200" height="300" src="images/Fa12/t/YvonneHo.jpg" alt="" h="" title="" class="staff" /></a> <br /><b> Yvonne Ho </b> ( <a href="bios/YvonneHoBio.txt">bio</a> ) <br />
+    </div>
+
+    <div style="clear: both;">   </div>
+
+    <h1> BJC / EdX Development </h1>
+    <div style="width: 20%; float: left; text-align: center;">
+      <a href="images/Fa12/DanArmendariz.jpg"><img width="200" align="middle" height="300" src="images/Fa12/t/DanArmendariz.jpg" alt="images/Fa12/DanArmendariz.jpg" title="" class="staff" /></a> <br /> <a href="http://danallan.net/about.php"> <b>Dan Armendariz</b></a> (<a href="bios/ArmBio.txt">bio</a>) <br />
+    </div>
+    <div style="width: 20%; float: left; text-align: center;">
+      <a href="images/Fa12/AatashParikh.jpg"><img width="200" align="middle" height="300" src="images/Fa12/t/AatashParikh.jpg" alt="" title="" class="staff" /></a> <br /> <b>Aatash Parikh</b> (<a href="bios/AatashBio.txt">bio</a>) <br /> 
+    </div>
+    <div style="width: 20%; float: left; text-align: center;">
+      <a href="images/Fa12/SamirMakhani.jpg"><img width="200" align="middle" height="300" src="images/Fa12/t/SamirMakhani.jpg" alt="" title="" class="staff" /></a> <br /> <b>Samir Makhani</b> (<a href="bios/SamirBio.txt">bio</a>) <br />
+    </div>
+    <div style="width: 20%; float: left; text-align: center;">
+      <a href="images/Sp13/AleksKamko.jpg"><img width="200" height="300" src="images/Sp13/t/AleksKamko.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Aleks Kamko </b> (<a href="bios/AleksKamkoBio.txt">bio</a>) <br />
+    </div>
+    <div style="width: 20%; float: left; text-align: center;">
+      <a href="images/Sp13/JaclynBurge.jpg"><img width="200" height="300" src="images/Sp13/t/JaclynBurge.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Jaclyn Burge </b> (<a href="bios/JaclynBurgeBio.txt">bio</a>) <br />
+    </div>
+
+    <div style="clear: both;">   </div>
+    <div style="clear: both;">   </div>
+
+    <!--grades --> <a name="grades">
+      <p class="heading">  Grading </p>
+    </a>
+    <p> For the most part, we would prefer to teach this course <i> without </i>
+      grades. What a wonderful concept, learning for learning sake! However,
+      even though we can't change the "system" overnight, we can create grading
+      policies that support learning as much as possible. The various course
+      activities will contribute to your grade as follows: </p>
+    <table class="grades">
+      <tbody>
+        <tr>
+          <th> Activity </th>
+          <th> Course Points </th>
+          <th> Percentage of Total Grade </th>
+        </tr>
+        <tr>
+          <td class="calendar"> Weekly Quizzes and Homework </td>
+          <td class="calendar"> 60 </td>
+          <td class="calendar"> 15% </td>
+        </tr>
+        <tr>
+          <td class="calendar"> Blog </td>
+          <td class="calendar"> 60 </td>
+          <td class="calendar"> 15% </td>
+        </tr>
+        <tr>
+          <td class="calendar"> Midterm Project </td>
+          <td class="calendar"> 60 </td>
+          <td class="calendar"> 15% </td>
+        </tr>
+        <tr>
+          <td class="calendar"> Final Project </td>
+          <td class="calendar"> 60 </td>
+          <td class="calendar"> 15% </td>
+        </tr>
+        <tr>
+          <td class="calendar"> Quest </td>
+          <td class="calendar"> 20 </td>
+          <td class="calendar"> 5% </td>
+        </tr>
+        <tr>
+          <td class="calendar"> Midterm </td>
+          <td class="calendar"> 60 </td>
+          <td class="calendar"> 15% </td>
+        </tr>
+        <tr>
+          <td class="calendar"> Final Exam </td>
+          <td class="calendar"> 80 </td>
+          <td class="calendar"> 20% </td>
+        </tr>
+      </tbody>
+    </table>
+    <h1> How We'll Calculate Your Grade </h1>
+    <p> Your letter grade will be determined by total course points, as shown in
+      the table below. Incomplete grades will be granted only for dire medical
+      or personal emergencies that cause you to miss the final exam, and only if
+      your work up to that point is satisfactory. </p>
+    <table class="grades">
+      <!--the &nbsp; here are to properly align the grades-->
+      <tbody>
+        <tr>
+          <th> Points </th>
+          <th> Grade </th>
+        </tr>
+        <tr>
+          <td class="calendar"> 390-400 </td>
+          <td class="calendar"> A+ </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 370-389 </td>
+          <td class="calendar"> A   </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 360-369 </td>
+          <td class="calendar"> A-  </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 350-359 </td>
+          <td class="calendar"> B+ </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 330-349 </td>
+          <td class="calendar"> B   </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 320-329 </td>
+          <td class="calendar"> B-  </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 310-319 </td>
+          <td class="calendar"> C+ </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 290-309 </td>
+          <td class="calendar"> C   </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 280-289 </td>
+          <td class="calendar"> C-  </td>
+        </tr>
+        <tr>
+          <td class="calendar"> 240-279 </td>
+          <td class="calendar"> D   </td>
+        </tr>
+        <tr>
+          <td class="calendar"> &lt; 240 </td>
+          <td class="calendar"> F   </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--old location of calendar--> <br />
+    <!--
+    <a name="online">      <p class="heading">  Difference between CS10 and CSw10 </p>    </a>    #include file="CSw10.html"--><a
+      name="resources">
+      <p class="heading">  Resources </p>
+    </a>
+    <p>     <b> λ </b>   <a href="bios/family.html"> CS10 Family </a> <br />
+          <b> λ </b>   <a href="http://codepath.co/"> Codepath</a> <br />
+          <b> λ </b>   <a href="http://byob.berkeley.edu/"> BYOB : Build Your
+        Own Blocks </a> <br />
+          <b> λ </b>   <a href="http://scratch.mit.edu/forums/"> Scratch
+        Forums </a> <br />
+          <b> λ </b>   <a href="http://www.bitsbook.com/"> Blown to Bits </a>
+      <br />
+          <b> λ </b>   <a href="http://www.debuggingrules.com/"> Debugging
+        Rules! </a> <br />
+      <!--These odd entities are non-breaking-space, non-breaking-space, lambda, non-breaking-space. Lists with type "none" create a black circle as their bullet. -->
+          <b> λ </b>   <a href="http://www.berkeley.edu"> UC Berkeley </a> <br />
+          <b> λ </b>   <a href="http://coe.berkeley.edu/"> College of
+        Engineering </a> <br />
+          <b> λ </b>   <a href="http://www.eecs.berkeley.edu/"> Department of
+        Electrical Engineering &amp; Computer Sciences </a> <br />
+          <b> λ </b>   <a href="http://webcast.berkeley.edu/course_details_new.php?seriesid=2010-D-26250&amp;semesterid=2010-D">
+        Webcast archive of 2010Fa lectures </a> <br />
+          <b> λ </b>   <a href="lab/solutions.html"> Solutions to Lab
+        Exercises </a> </p>
+    <br />
+    <hr />
+    <table>
+      <tbody>
+        <tr class="heading" style="background-color:CadetBlue;">
+        </tr>
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+    <center> <tt> Contact <a href="mailto:web.cs10@gmail.com"> Webmaster </a>
+        |
+        <!--
+<script language="JavaScript">var datedate=document.lastModifieddocument.write("Last modified on "+date)</script>-->
+        <!--#config timefmt="%Y-%m-%d@%H:%M:%S %Z"-->
+        <!--#flastmod file="index.shtml"--> </tt> </center>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"> <img
+        align="right" alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+    </a>
+    <p align="center"> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+        Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported
+        License </a> </p>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!--
+--------------------------------------
+--------------------------------------
+<table>
+<tr>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+ <!--photo-->
+<a href="images/StephanieChou.jpg"><img src="images/StephanieChouSm.jpg" width="160" height="240" alt="" title="" class="staff"/><br /></a>
+ <!--ID-->
+<b>Stephanie Chou</b>
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+ <!--photo-->
+<img src="images/courtney.jpg" width="160" height="240" alt="" title="" class="staff"><br />
+<!--ID-->
+<b>Courtney Wang</b>
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+<!--photo-->
+<img src="images/daisy.jpg" width="160" height="240" alt="" title=""  class="staff"/><br />
+
+<!--ID-->
+<b>Daisy Zhou</b> (<a href="bios/DaisyBio.txt">bio</a>)
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+
+--------------------------------------
+--------------------------------------
+-->
+
+<div style="clear: both;">&nbsp;</div>
+
+<h1>TAs-in-Training (TAsiT) and Lab Assistants</h1>
+
+<strong>TBA</strong>
+<!--
+
+--------------------------------------
+--------------------------------------
+
+<table>
+
+<tr>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+<!--photo-->
+<img src="images/AloniCohen.jpg" width="160" height="240" alt="" title="" class="staff"><br />
+<!--ID-->
+<b>Aloni Cohen (TAiT)</b>
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+<!--photo-->
+<a href="images/NavinEluthesen.jpg"><img src="images/NavinEluthesenSm.jpg" width="160" height="240" alt="" title="" class="staff"/><br /></a>
+<!--ID-->
+<b>Navin Eluthesen (TAiT)</b> (<a href="bios/NavinBio.txt">bio</a>)
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+<!--photo-->
+<a href="images/GlennSugden.jpg"><img src="images/GlennSugdenSm.jpg" width="160" height="240" alt="" title=""  class="staff"/><br /></a>
+<!--ID-->
+<b>Glenn Sugden (TAiT)</b>
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+<!--photo-->
+<a href="images/PierceVollucci.jpg"><img src="images/PierceVollucciSm.jpg" width="160" height="240" alt="" title=""  class="staff"/><br /></a>
+<!--ID-->
+<b>Pierce Vollucci (TAiT)</b> (<a href="bios/PierceBio.txt">bio</a>)
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+ <!--photo-->
+<img src="images/NPY.jpg" width="160" height="240" alt="" title="" class="staff"><br />
+<!--ID-->
+<b>Gideon Chia</b>
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+ <!--photo-->
+<a href="images/ChristianPedersen.jpg"><img src="images/ChristianPedersenSm.jpg" width="160" height="240" alt="" title="" class="staff"/><br /></a>
+ <!--ID-->
+<b>Christian Pedersen</b>
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+ <!--photo-->
+<a href="images/WaylandSiao.jpg"><img src="images/WaylandSiaoSm.jpg" width="160" height="240" alt="" title="" class="staff"><br /></a>
+<!--ID-->
+<b>Wayland Siao</b>
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+ <!--photo-->
+<img src="images/courtney.jpg" width="160" height="240" alt="" title="" class="staff"><br />
+<!--ID-->
+<b>Courtney Wang</b>
+</td>
+</tr>
+</table>
+</td>
+
+<td>
+<table class="staffbox">
+<tr>
+<td>
+ <!--photo-->
+<a href="images/BrandonYoung.jpg"><img src="images/BrandonYoungSm.jpg" width="160" height="240" alt="" title="" class="staff"/><br /></a>
+ <!--ID-->
+<b>Brandon Young</b>
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+
+
+
+</table>
+
+-->
+
+<h1>Course Support & Research</h1>
+
+<div style="width: 30%; float: left; text-align: center;">
+ <!--photo-->
+<a href="images/CarrieCai.jpg"><img src="images/CarrieCaiSm.jpg" width="160" height="240" alt="" title="" class="staff"><br /></a>
+<!--ID-->
+<b>Carrie Cai</b>
+</div>
+
+<div style="width: 30%; float: left; text-align: center;">
+<!--photo-->
+<img src="images/mike.jpg" width="160" height="240" alt="" title=""  class="staff"/><br />
+<!--ID-->
+<b><a href="http://www.eecs.berkeley.edu/~clancy/">Senior Lecturer Mike Clancy</a></b>
+</div>
+
+<div style="width: 30%; float: left; text-align: center;">
+ <!--photo-->
+<a href="images/ColleenLewis.jpg"><img src="images/ColleenLewisSm.jpg" width="160" height="240" alt="" title="" class="staff"/><br /></a>
+ <!--ID-->
+<b><a href="http://colleenmlewis.com/">Colleen Lewis</a></b>
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+
+<h1>High School Teachers</h1>
+
+<div style="width: 30%; float: left; text-align: center;">
+<img src="images/EugeneLemon.jpg" width="160" height="240" alt="" title="" class="staff"/><br />
+<b>Eugene Lemon</b><br><i>Ralph Bunche High School</i><br>Oakland, CA
+</div>
+
+<div style="width: 30%; float: left; text-align: center;">
+<img src="images/NPY.jpg" width="160" height="240" alt="" title=""  class="staff"/><br />
+<!--ID-->
+<b>Josh Paley</b><br><i>Gunn High School</i><br>Palo Alto, CA
+</div>
+
+<div style="width: 30%; float: left; text-align: center;">
+<a href="images/RayPedersen.jpg"><img src="images/RayPedersenSm.jpg" width="160" height="240" alt="" title="" class="staff"><br /></a>
+<!--ID-->
+<b>Ray Pedersen</b><br><i>Albany High School</i><br>Albany, CA
+</div>
+

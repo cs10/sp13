@@ -1,0 +1,57 @@
+WHERE DID YOU GROW UP?  WHAT WAS YOUR ACADEMIC PATH?
+I grew up in El Cerrito, which is literally a 10-minute BART ride away from
+campus (long trek from home, I know). I went to El Cerrito High, and from there
+went to Berkeley in Fall of 2010, which is also when I took the OG (or "first
+ever,"  if you're not hip with the lingo) CS10 course! I came in undeclared in
+L&S (heading towards an English route oddly enough), but after I took CS10, I
+got hooked into programming, and am now a declared Computer Science Major!
+
+HOW MUCH PROGRAMMING HAVE YOU DONE?  WHAT LANGUAGES?
+My first language was Scratch/BYOB when I took CS10. After that I learned Scheme
+and Java, and C which I learned in CS61a and CS61b  and CS61c
+respectively I learned a lot of web development languages
+
+over summer at my internship, so I've gotten fairly good at
+JavaScript, jQuery, HTML5, CSS3, and Node.js.
+
+I also know a decent amount of UNIX. Currently, I'm learning Python
+and Ruby, and am
+
+becoming more familiar with the aforementioned web development languages.
+
+
+WHAT ARE YOUR HOBBIES?
+I love to swim (did it competitively for 10 years!), discover new bands to
+listen to, play guitar, and try random restaurants!
+
+WHAT ARE SOME OF YOUR TALENTS AND SKILLS?
+Again, swimming is a big one. I made it to NCS and Far Westerns senior year of
+high school, and had previously competed in the Junior Olympics. Guitar has been
+something I picked up more recently, but it's my favorite way to relax. I can
+also wiggle my ears.
+
+
+HAVE YOU EVER DONE ANYTHING REMARKABLE?
+At my internship this past summer, i built a website from the ground
+up using Node.js (server side JavaScript),
+
+JavaScript, jQuery, HTML5 and CSS3. We also hooked it up to APIs for
+Blogger, Twitter, and Google Calenders so that
+
+the person maintaining the site only needed to know how to write blog
+posts to update it. The website also automatically changes
+
+its layout based on your screen size, so you can view it easily on a
+phone, tablet, and monitor.
+
+Also, I survived (and did pretty well in) CS61b with Professor Paul Hilfinger.
+
+
+WHAT COMMITMENTS WILL BE CONSUMING YOUR CYCLES THIS TERM?
+In addition to being a reader for CS10, some of the classes I'll be taking
+include CS188(AI), CS186 (Databases), and Social Implications of
+Computing. I'll also be doing working on human-centered design
+projects in Berkeley Innovation,
+leading the Student Commuters at Cal club as Co-President and Web Developer, and
+keeping Berkeley up to date with music as the Lead Music Critic for the Daily
+Californian! Looks like a fun semester!
