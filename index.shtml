@@ -541,9 +541,6 @@ document[img_name].src = img_src;
       <a href="images/Sp13/AndrewSchmitt.jpg"><img width="200" height="300" src="images/Sp13/t/AndrewSchmitt.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Andrew Schmitt </b> ( <a href="bios/AndrewSchmittBio.txt">bio</a> ) <br />
     </div>
     <div style="width: 25%; float: left; text-align: center;">
-      <a href="images/Sp13/AudreyChou.jpg"><img width="200" height="300" src="images/Sp13/t/AudreyChou.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Audrey Chou </b> ( <a href="bios/AudreyChouBio.txt">bio</a> ) <br />
-    </div>
-    <div style="width: 25%; float: left; text-align: center;">
       <a href="images/Fa12/BrianTerry.jpg"><img width="200" height="300" src="images/Fa12/t/BrianTerry.jpg" alt="" h="" title="" class="staff" /></a> <br /> <b> Brian Terry </b> ( <a href="bios/BrianTerryBio.txt">bio</a> ) <br />
     </div>
 
